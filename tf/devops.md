@@ -73,9 +73,11 @@ All this happens in Gitlab, cuase it's easy;)
 8. If the tests pass with 98% move on and deploy to staging against traffic which is directly forked from production(could be goreplay or just ingress feature.)
 9. If it breaks down - go back to development, if it doesn't - move on to verifying what is functioning - time for manual testing.
 10. if manual testing works out well - congrats - you can move start a deployment to production. If not - back to the drawing board.
-11. Production rollout. If it doesn't work out, roll back to an earlier version. 
+11. Production rollout. If it doesn't work out, roll back to an earlier version.
 
 #### Question 4
+
+NB: For me, it's a chicken and an egg problem - do I have an existing env, do I not, can I use object storage for state. It's very general.
 
 Create a [Terraform](https://www.terraform.io/) provisioning for [Google Cloud
 Compute](https://cloud.google.com/compute).
